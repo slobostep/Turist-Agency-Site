@@ -14,7 +14,7 @@
 }
 
 .header{
-    
+    width: 100%;
     height: 100vh; 
     padding-top: 20px;
     background-image:  var(--color-darker),url('img/banner.jpg');
@@ -25,9 +25,11 @@
     color: white;
 }
 .container{
-    width: 90%;  
-    margin: auto;
-    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    background-color: red; 
 }
 .container img{
     width: 170px;
@@ -103,16 +105,24 @@
 }
 
 .features-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 30px;
+    margin: 0 5em;
+}
+/* .features-wrapper{
     display: flex;
     justify-content: space-evenly;
     margin: 2em;
-}
+} */
 .features-col-1{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 1px;
+    /* display: flex;
     flex-direction: column;
-    
-    margin: .5em 2em;
-    flex: 1;
+     */
+    /* margin: .5em 2em; */
     box-shadow: 1px 1px 6px .5px;
     cursor: pointer;
     transition: .2s ease-in-out;
@@ -122,8 +132,7 @@
 
 }
 .features-row-img{
-    position: relative; 
-    flex: 1;
+    height: 400px;
 }
 .features-row-img img{
     width: 100%;
@@ -131,14 +140,12 @@
 }
 .features-row-description{
     padding: 5px;
-    flex: 1;
-    
 }
 .features-row-description p{
-    font-size: .7em;
+    font-size: .9em;
 }
 .features-row-description h1{
-    font-size: 1em;
+    font-size: 1.5em;
     text-align: left;
     margin-bottom: .3em;
     padding: 0;
@@ -150,7 +157,7 @@
 
 }
 .features-row-info p{
-    font-size: .7em;
+    font-size: .9em;
     text-align: center;  
     
 }
